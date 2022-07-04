@@ -1,0 +1,146 @@
+<!--이 문서는 HTML 언어를 사용한다고 말해주는 시작 태그. 닫는 태그 없이 단독으로 쓰인다.-->
+<!DOCTYPE html>
+<!--여기서 부터 HTML 문서 시작-->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML 태그 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVSCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        table, tr, td, th {
+            border: solid;
+            color: olive;
+        }
+    </style>
+    <title>e.genieee</title>
+</head>
+<body>
+    <!-- h 시리즈 -->
+    <h1>태그를 연습해보자</h1>
+    <br>
+    <h2>h 시리즈</h2>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    <br>
+    <!-- 문단 태그 -->
+    <h2>문단 태그 p</h2>
+    <p>이 p태그는 문단 태그입니다아.</p>
+    <P>문단 태그는 어떻게 쓰는 건지 볼까요</P>
+    <br>
+    <!-- 하이퍼링크 태그 target값을 _self로 두면 현재 브라우저 창이 바뀌면서 띄워지고, _blank로 두면 새로운 브라우저 탭에 띄워진다-->
+    <h2>링크 태그 a</h2>
+    <a href="https://www.github.com/Egenieee" target="_blank">지니 깃허브 주소</a>
+    <br>
+    <br>
+    <!-- 리스트 -->
+    <h2>리스트 태그 ol(순서o), ul(순서x), li</h2>
+    <ol>
+        <li>첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+    </ol>
+    <ul>
+        <li>이진희</li>
+        <li>이지니</li>
+        <li>Egenieee</li>
+    </ul>
+
+    <br>
+    <!-- 이미지 삽입 alt값은 웹접근성을 높이는 필수 속성처럼 다루는 것이 좋다. 구글에서도 권장 -->
+    <!-- 이미지의 사이즈를 줄이고 싶다? width 속성을 이용하자. 가로, 또는 세로만 지정하면 나머지는 알아서 조절됨.-->
+    <h2>이미지 삽입 태그 img</h2>
+    <h3>너무나도 귀여운 우리 아기 포뇨 입니다앙</h3>
+    <img src="/html_practice/IMG_1400.JPG" alt="고양이 포뇨" width="300px">
+    <br>
+    <br>
+    <!-- div 태그 모던 웹페이지에서 가장 많이 사용하는 태그-->
+    <!-- 화면에 표시가 달라지는 부분은 없는 신기한 태그당. 모던 웹에서 css, js로 html 문서의 특정 부분을 제어할 때 사용-->
+    <h2>특정 부분을 지정하는데 사용하는 div 태그</h2>
+    <div>div 태그 안에 썼음에도, 이렇게 보면 다른거 없어보인다. 하지만 div로 특정 영역을 지정하게 되면, css, JAVSCRIPT 를 적용할 수 있기 때문에, 대부분 전체 내용을 다 div 태그 안에 때려 넣어서 사용하는 경우가 많다.</div>
+    <br>
+    <!-- table 태그 -->
+    <!-- head, body, foot을 나누는 이유는 검색 엔진이 잘 참고하도록 하기 위함 -->
+    <h2>tabel 태그</h2>
+    <table>
+        <!-- 표의 head ; 표에서 한 번만 나오거나 안나오거나 해야함-->
+        <thead>
+            <!-- 하나의 열 -->
+            <tr>
+                <!-- 두개의 내용 열-->
+                <th>제목 열1</th>
+                <th>제목 열2</th>
+            </tr>
+        </thead>
+        <!-- 표의 body -->
+        <tbody>
+            <tr>
+                <td>내용 열1</td>
+                <td>내용 열2</td>
+            </tr>
+            <tr>
+                <td>내용 열3</td>
+                <td>내용 열4</td>
+            </tr>
+        </tbody>
+        <!-- 표의 foot ; 표에서 한 번만 나오거나 안나오거나 해야함-->
+        <tfoot>
+            <tr>
+                <td>tfoot 1</td>
+                <td>tfoot 2</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br>
+    <!-- 테이블 열, 행 확장 -->
+    <h2>table 열, 행 확장은 colspan, rowspan 속성을 이용하자</h2>
+    <!-- 테이블 열 확장 -->
+    <h3>colspan</h3>
+    <table>
+        <tr>
+            <!-- 병합하고자 하는 열의 개수를 써수자.-->
+            <td colspan="3">column expansion</td>
+        </tr>
+        <tr>
+            <td>column 1</td>
+            <td>column 2</td>
+            <td>column 3</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td>column 1</td>
+            <td colspan="2">column expansion</td>
+        </tr>
+        <tr>
+            <td>column 1</td>
+            <td>column 2</td>
+            <td>column 3</td>
+        </tr>
+    </table>
+
+    <br>
+    <!-- 테이블 행 확장 -->
+    <h3>rowspan</h3>
+    <table>
+        <tr>
+            <!-- 병합하고자 하는 행의 개수를 써주자. -->
+            <td rowspan="2">row expansion</td>
+            <td>column 2</td>
+            <td>colum 3</td>
+        </tr>
+        <tr>
+            <td>column 2</td>
+            <td>colum 3</td>
+        </tr>
+    </table>
+</body>
+</html>

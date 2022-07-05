@@ -142,5 +142,25 @@
             <td>colum 3</td>
         </tr>
     </table>
+
+    <br>
+    <!-- form, input 태그 -->
+    <h2>사용자의 입력을 받는 form 태그 ; input 태그 등과 같이 사용돼서 로그인 등을 할 수 있다.</h2>
+    <h3>text type</h3>
+    <form action="login.html" method="post">
+        <!-- text로 입력 받아서 id, pw에 입력 내용 담아서 url로 넘어간다.-->
+        <!-- autofocus는 창을 열면 바로 커서가 들어가있다. autocomplete는 자동완성 기능 on, off로 설정 가능-->
+        ID : <input type="text" name="id" autofocus> 
+        PW : <input type="text" name="pw" autocomplete="on">
+    </form>
+    <br>
+    <br>
+    <h3>button type</h3>
+    <form action="login.html" method="post">
+        <!-- 버튼으로 입력 받아서 id, pw에 입력 내용 담아서 url로 넘어간다.-->
+        ID : <input type="button" value="push ID" name="id"> 
+        PW : <input type="button" value="push PW" name="pw">
+    </form>
+    <!-- 입력 태그에는 버튼, 체크 박스, 텍스트 등 많은 타입이 있다. -->
 </body>
 </html>

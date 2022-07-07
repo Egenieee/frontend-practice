@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- viewport 단위 100이 최대값이다.-->
+        <!-- vw : viewport width의 1/100 (1%)-->
+        <!-- vh : viewport height의 1/100 (1%)-->
+        <!-- vmin : viewport width 또는 height 중 작은 쪽의 1/100 (1%)-->
+        <!-- vmax : viewport width 또는 height 중 큰 쪽의 1/100 (1%)-->
+
+        <!-- 따라서 아래 스타일은 box의 너비는 뷰포트를 100 퍼센트 다 이용하겠다는 뜻이고, 높이는 50 퍼센트만 이용하겠다는 뜻이다. -->
+        <style>
+            .box1 {
+                background-color: olive;
+                width: 100vw;
+                height: 50vw;
+            }
+
+            .box2 {
+                background-color: brown;
+                width: 100vw;
+                height: 50vw;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+    </body>
+</html>

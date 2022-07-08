@@ -1,138 +1,138 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="css selector 연습이당">
-    <meta name="keywords" content="HTML, CSS, JAVSCRIPT">
-    <meta name="author" content="e.genieee">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <style>
-        /* * {
-            border: none;
-            margin: 0;
-            padding: 0;
-        } -> 전체 css 초기화를 예전엔 이런 코드로 했었음. */
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="css selector 연습이당">
+        <meta name="keywords" content="HTML, CSS, JAVSCRIPT">
+        <meta name="author" content="e.genieee">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <style>
+            /* * {
+                border: none;
+                margin: 0;
+                padding: 0;
+            } -> 전체 css 초기화를 예전엔 이런 코드로 했었음. */
 
-        h2 {
-            color: brown;
-        }
+            h2 {
+                color: brown;
+            }
 
-        h4 {
-            color: olive;
-        } 
-        /* -> tag selector로, h1 태그에만 컬러를 적용한다는 뜻 */
+            h4 {
+                color: olive;
+            } 
+            /* -> tag selector로, h1 태그에만 컬러를 적용한다는 뜻 */
 
-        .genie {
-            color : olive;
-        } 
-        /* -> class selector로, 해당 class 값을 가지고 있는 태그에 색상을 적용한다는 뜻 */
+            .genie {
+                color : olive;
+            } 
+            /* -> class selector로, 해당 class 값을 가지고 있는 태그에 색상을 적용한다는 뜻 */
 
-        #genie {
-            color : olive;
-        } 
-        /* -> id selector로, 해당 아이디 값을 가지고 있는 태그에 색상을 적용한다는 뜻 */
-        
-        [egenieee] {
-            color : olive;
-        } 
-        /* -> attribute selector로, 속성을 가지고 있는 태그에 색상을 적용한다는 뜻 */
+            #genie {
+                color : olive;
+            } 
+            /* -> id selector로, 해당 아이디 값을 가지고 있는 태그에 색상을 적용한다는 뜻 */
+            
+            [egenieee] {
+                color : olive;
+            } 
+            /* -> attribute selector로, 속성을 가지고 있는 태그에 색상을 적용한다는 뜻 */
 
-        [genie="true"] {
-            color : olive;
-        }
-        /* -> attribute selector에 속성 값을 주어 특정 값을 가진 태그에게만 스타일을 적용할 수 있다*/
+            [genie="true"] {
+                color : olive;
+            }
+            /* -> attribute selector에 속성 값을 주어 특정 값을 가진 태그에게만 스타일을 적용할 수 있다*/
 
-        [genie~="true"] {
-            color : olive;
-        }
-        /* -> 속성 값 앞에 ~를 붙이면 속성 값에 공백을 두고 true라는 값이 있으면 스타일 적용 */
+            [genie~="true"] {
+                color : olive;
+            }
+            /* -> 속성 값 앞에 ~를 붙이면 속성 값에 공백을 두고 true라는 값이 있으면 스타일 적용 */
 
-        [genie|="true"] {
-            color : olive;
-        }
-        /* -> 속성 값이 true이거나 뒤에 바로 - 문자가 오는 속성 값 이름일 경우에 스타일 적용*/
+            [genie|="true"] {
+                color : olive;
+            }
+            /* -> 속성 값이 true이거나 뒤에 바로 - 문자가 오는 속성 값 이름일 경우에 스타일 적용*/
 
-        p[genie^="hello"] {
-            color: olive;
-        }
-        /* -> p태그 요소 중에 속성 값이 hello로 시작하는 모든 요소에 스타일 적용 (대소문자 구분)*/
+            p[genie^="hello"] {
+                color: olive;
+            }
+            /* -> p태그 요소 중에 속성 값이 hello로 시작하는 모든 요소에 스타일 적용 (대소문자 구분)*/
 
-        p[genie$="world"] {
-            color: olive;
-        }
-        /* -> p태그 요소 중에 속성 값이 world 끝나는 모든 요소에 스타일 적용 (대소문자 구분)*/
+            p[genie$="world"] {
+                color: olive;
+            }
+            /* -> p태그 요소 중에 속성 값이 world 끝나는 모든 요소에 스타일 적용 (대소문자 구분)*/
 
-        p[genie*="hi"] {
-            color: olive;
-        }
-        /* -> p태그 요소 중에 속성 값이 hi 끝나는 모든 요소에 스타일 적용 (대소문자 구분)*/
+            p[genie*="hi"] {
+                color: olive;
+            }
+            /* -> p태그 요소 중에 속성 값이 hi 끝나는 모든 요소에 스타일 적용 (대소문자 구분)*/
 
-    </style>
-    <title>e.genieee</title>
-</head>
-<body>
-    <h1>Css selector를 알아보자 !</h1>
+        </style>
+        <title>e.genieee</title>
+    </head>
+    <body>
+        <h1>Css selector를 알아보자 !</h1>
 
-    <br>
-    <h2>tag selector</h2>
-    <h3>h4 {color : olve}</h3>
-    - 특정 태그에 스타일을 적용할 수 있다. 
-    <h4>h4</h4>
+        <br>
+        <h2>tag selector</h2>
+        <h3>h4 {color : olve}</h3>
+        - 특정 태그에 스타일을 적용할 수 있다. 
+        <h4>h4</h4>
 
-    <br>
-    <h2>class selector</h2>
-    <h3>.genie {color : olve}</h3>
-    - 특정 class에 스타일을 적용할 수 있다. 
-    <p class="genie"> class="genie"</p>
+        <br>
+        <h2>class selector</h2>
+        <h3>.genie {color : olve}</h3>
+        - 특정 class에 스타일을 적용할 수 있다. 
+        <p class="genie"> class="genie"</p>
 
-    <br>
-    <h2>id selector</h2>
-    <h3>#genie {color : olve}</h3>
-    - 특정 id에 스타일을 적용할 수 있다. 
-    <p id="genie">id="genie"</p>
+        <br>
+        <h2>id selector</h2>
+        <h3>#genie {color : olve}</h3>
+        - 특정 id에 스타일을 적용할 수 있다. 
+        <p id="genie">id="genie"</p>
 
-    <br>
-    <h2> attribute selector</h2>
-    <h3>[egnieee] {color : olive;}</h3>
-    - attribute selector에 속성을 주어 특정 속성을 가진 태그에게만 스타일을 적용할 수 있다
-    <p geniee>geniee</p>
-    <p egenieee>egenieee</p>
+        <br>
+        <h2> attribute selector</h2>
+        <h3>[egnieee] {color : olive;}</h3>
+        - attribute selector에 속성을 주어 특정 속성을 가진 태그에게만 스타일을 적용할 수 있다
+        <p geniee>geniee</p>
+        <p egenieee>egenieee</p>
 
-    <br>
-    <h3>[genie="ture"] {color : olive;}</h3>
-    - attribute selector에 속성 값을 주어 특정 값을 가진 태그에게만 스타일을 적용할 수 있다
-    <p genie="true"> genie="true"</p>
-    <p genie="false">genie="false"</p>
+        <br>
+        <h3>[genie="ture"] {color : olive;}</h3>
+        - attribute selector에 속성 값을 주어 특정 값을 가진 태그에게만 스타일을 적용할 수 있다
+        <p genie="true"> genie="true"</p>
+        <p genie="false">genie="false"</p>
 
-    <br>
-    <h3>[genie~="true"] {color : olive;}</h3>
-    - 속성 값 앞에 ~를 붙이면 속성 값에 공백을 두고 true라는 값이 있으면 스타일을 적용할 수 있다.
-    <p genie="truefalse">genie="truefalse"</p>
-    <p genie="false true">genie="fasle true"</p>
+        <br>
+        <h3>[genie~="true"] {color : olive;}</h3>
+        - 속성 값 앞에 ~를 붙이면 속성 값에 공백을 두고 true라는 값이 있으면 스타일을 적용할 수 있다.
+        <p genie="truefalse">genie="truefalse"</p>
+        <p genie="false true">genie="fasle true"</p>
 
-    <br>
-    <h3>[genie|="true"] {color : olive;}</h3>
-    - 속성 값이 true이거나 뒤에 바로 "-" 문자가 오는 속성 값 이름일 경우에 스타일을 적용할 수 있다. 
-    <p genie="true-true">genie="true-true"</p>
-    <p genie="falsetrue">genie="falsetrue"</p>
+        <br>
+        <h3>[genie|="true"] {color : olive;}</h3>
+        - 속성 값이 true이거나 뒤에 바로 "-" 문자가 오는 속성 값 이름일 경우에 스타일을 적용할 수 있다. 
+        <p genie="true-true">genie="true-true"</p>
+        <p genie="falsetrue">genie="falsetrue"</p>
 
-    <br>
-    <h3>p[genie^="hello"] {color : olive;}</h3>
-    - p태그의 요소 중 속성 값이 hello로 시작하는 모든 태그에 스타일을 적용한다. 대소문자 구분 o
-    <p genie="helloworld">genie="helloworld"</p>
-    <p genie="worldhello">genie="wordlhello"</p>
+        <br>
+        <h3>p[genie^="hello"] {color : olive;}</h3>
+        - p태그의 요소 중 속성 값이 hello로 시작하는 모든 태그에 스타일을 적용한다. 대소문자 구분 o
+        <p genie="helloworld">genie="helloworld"</p>
+        <p genie="worldhello">genie="wordlhello"</p>
 
-    <br>
-    <h3>p[genie^="world"] {color : olive;}</h3>
-    - p태그의 요소 중 속성 값이 world로 끝나는 모든 태그에 스타일을 적용한다. 대소문자 구분 o
-    <p genie="helloworld">genie="helloworld"</p>
-    <p genie="worldhello">genie="wordlhello"</p>
+        <br>
+        <h3>p[genie^="world"] {color : olive;}</h3>
+        - p태그의 요소 중 속성 값이 world로 끝나는 모든 태그에 스타일을 적용한다. 대소문자 구분 o
+        <p genie="helloworld">genie="helloworld"</p>
+        <p genie="worldhello">genie="wordlhello"</p>
 
-    <br>
-    <h3>p[genie*="hi"] {color : olive;}</h3>
-    - p태그의 요소 중 속성 값에 hi 포함된 모든 태그에 스타일을 적용한다. 대소문자 구분 o
-    <p genie="everybody hi">genie="everybody hi"</p>
-    <p genie="aaaaaahiaaaaaaa">genie="aaaaaahiaaaaaaa"</p>
-</body>
+        <br>
+        <h3>p[genie*="hi"] {color : olive;}</h3>
+        - p태그의 요소 중 속성 값에 hi 포함된 모든 태그에 스타일을 적용한다. 대소문자 구분 o
+        <p genie="everybody hi">genie="everybody hi"</p>
+        <p genie="aaaaaahiaaaaaaa">genie="aaaaaahiaaaaaaa"</p>
+    </body>
 </html>

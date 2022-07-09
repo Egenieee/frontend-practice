@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="css selector 연습이당">
+        <meta name="keywords" content="HTML, CSS, JAVSCRIPT">
+        <meta name="author" content="e.genieee">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <style>
+            h2 {
+                color:royalblue;
+            }
+            /* 클래스 이름이 genie이 아닌 span 태그*/
+            span:not(.genie) {
+                color: olive;
+            }
+
+            /* input 값이 입력이 되지 않을 경우 invalid하므로 백그라운드 컬러를 브라운으로 적용 */
+            input[type="text"]:invalid {
+                background-color: brown;
+            }
+
+            /* input 값이 입력이 되지 않을 경우 valid하므로 백그라운드 컬러를 올리브로 적용 */
+            input[type="text"]:valid {
+                background-color: olive;
+            }
+
+            /* p tag에서 첫번째 글자에 스타일을 적용한다. */
+            h5::first-letter {
+                font-size: 1.5em;
+            }
+
+            /* p tag에서 첫번째 줄에 스타일을 적용한다. 반응형으로 작동함 크기를 키우거나 줄여도 한줄에만 스타일 적용*/
+            h5::first-line {
+                font-size: 1.3em;
+            }
+
+            /* p tag에서 마우스로 드래그된 부분에 스타일을 적용한다. */
+            h5::selection {
+                background-color: gray;
+            }
+
+            /* 특정 태그 전에 들어갈 내용을 정의할 수 있고, 그 내용에 스타일을 적용할 수 있다.*/
+            h4::before {
+                content: "[질문] ";
+                color: olive;
+                font-size: 1.5em;
+            }
+            
+            /* 특정 태그 후에 들어갈 내용을 정의할 수 있고, 그 내용에 스타일을 적용할 수 있다.*/
+            h4::after {
+                content: " *구글 참조";
+                color: olive;
+                font-size: 1.5em;
+            }
+        </style>
+        <title>e.genieee</title>
+    </head>
+    <body>
+        <h1>Egenieee</h1>
+        <div>
+            <h2>부정 셀렉터 (Negation Pseudo-Class Selector)</h2>
+            <h3>- 특정 태그를 제외한 태그에게만 스타일을 적용할 수 있다. </h3>
+            <h3>span:not(.genie) {color:olive;} </h3>
+            <br>
+            <div>
+                <span class="genie">class="genie"</span><br>
+                <span class="genieee">class="genieee"</span>
+            </div>
+        </div>
+        <br>
+        <div>
+            <h2>정합성 체크 셀렉터 (Validity Pseudo-Class Selector)</h2>
+            <h3>- 태그가 정합성을 만족하는지 안하는지 여부에 따라 스타일을 적용할 수 있다. </h3>
+            <h3>1. required</h3>
+            <h3>input[type="text"]:invalid {background-color:brown;}<br>
+            input[type="text"]:valid {background-color:olive;}
+            </h3>
+            <p>input type="text" id="id" name="id" required</p>
+            <form action="https://github.com/Egenieee">
+                <input type="text" id="id" name="id" required>
+                <input type="submit">
+            </form>
+        </div>
+        <br>
+        <div>
+            <h3>2. pattern</h3>
+            <p>input 태그에 입력한 값이 패턴에 만족해야만 valid한 상태라고 인식하고 스타일을 적용할 수 있다. * pattern 값은 정규표현식을 사용한다.</p>
+            <h3>input[type="text"]:invalid {background-color:brown;}<br>
+            input[type="text"]:valid {background-color:olive;}
+            </h3>
+            <p>input type="text" id="pw" name="pw" pattern="[0-9]{6}" required</p>
+            <form action="https://github.com/Egenieee">
+                <input type="text" id="pw" name="pw" pattern="[0-9]{6}" required>
+                <input type="submit">
+            </form>
+        </div>
+        <br>
+        <div>
+            <h2>가상 요소 셀렉터 (Pseudo-Element Selector)</h2>
+            <p>선택한 요소의 특정부분을 선택하여 스타일을 적용할 수 있다.</p>
+            <h3>
+                h4::before { content: "[질문] "; color: olive; font-size: 1.5em;}<br>
+                h4::after {content: " *구글 참조"; color: olive; font-size: 1.5em;}<br>
+                h5::first-letter {font-size: 1.5em;}<br>
+                h5::first-line {font-size: 1.3em;}<br>
+                h5::selection {background-color: gray;}<br>
+            </h3>
+            <h4>안녕하세요를 다른 나라 언어로는 어떻게 할까요?</h4>
+            <h5>안녕하세요 헬로 올라 봉주르 구덴탁 차오 오이 나마스테 살람 즈드랏스부이쩨 곤니찌아 메르하바 사잉 베이노 살레밋지즈베 씨어 메르하바 잠보 니하오 네이호 할로</h5>
+        </div>
+    </body>
+</html>

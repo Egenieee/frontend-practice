@@ -58,20 +58,6 @@
                 color: brown;
             }
             
-            /* 클래스 이름이 genie이 아닌 span 태그*/
-            span:not(.genie) {
-                color: olive;
-            }
-
-            /* input 값이 입력이 되지 않을 경우 invalid하므로 백그라운드 컬러를 브라운으로 적용 */
-            input[type="text"]:invalid {
-                background-color: brown;
-            }
-
-            /* input 값이 입력이 되지 않을 경우 valid하므로 백그라운드 컬러를 올리브로 적용 */
-            input[type="text"]:valid {
-                background-color: olive;
-            }
         </style>
         <title>e.genieee</title>
     </head>
@@ -146,29 +132,6 @@
                 <h2>This is h2 tag</h2>
                 (/div)
             </div>
-        </div>
-        <br>
-        <div>
-            <h2>부정 셀렉터 (Negation Pseudo-Class Selector)</h2>
-            <h3>- 특정 태그를 제외한 태그에게만 스타일을 적용할 수 있다. </h3>
-            <h3>span:not(.genie) {color:olive;} </h3>
-            <br>
-            <div>
-                <span class="genie">class="genie"</span><br>
-                <span class="genieee">class="genieee"</span>
-            </div>
-        </div>
-        <br>
-        <div>
-            <h2>정합성 체크 셀렉터 (Validity Pseudo-Class Selector)</h2>
-            <h3>- 태그가 정합성을 만족하는지 안하는지 여부에 따라 스타일을 적용할 수 있다. </h3>
-            <h3>input[type="text"]:invalid {background-color:brown;}<br>
-            input[type="text"]:valid {background-color:olive;}
-            </h3>
-            <form action="https://github.com/Egenieee">
-                <input type="text" id="id" name="id" required>
-                <input type="submit">
-            </form>
         </div>
     </body>
 </html>

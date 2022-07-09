@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="css selector 연습이당">
+        <meta name="keywords" content="HTML, CSS, JAVSCRIPT">
+        <meta name="author" content="e.genieee">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <style>
+            /* 부모의 첫번째 자식이면서, p 태그이면 스타일을 적용해라.*/
+            p:first-child {
+                color: red;
+            }
+
+            /* 부모의 마지막 자식이면서, p 태그이면 스타일을 적용해라.*/
+            p:last-child {
+                color: purple;
+            }
+
+            /* 부모의 두번째 자식이면서, p 태그이면 스타일을 적용해라.*/
+            p:nth-child(2) {
+                color: orange;
+            }
+
+            /* 부모의 뒤에서 세번째 자식이면서, p 태그이면 스타일을 적용해라.*/
+            p:nth-last-child(3) {
+                color: brown;
+            }
+
+            /* 홀수번째 h4 태그에 스타일을 적용하자. */
+            h4:nth-child(2n-1) {
+                color: olive;
+            }
+
+            /* 뒤에서부터 홀수번째 h4 태그에 스타일을 적용하자. */
+            h4:nth-last-child(2n-1) {
+                color: brown;
+            }
+
+            /* 부모의 첫번째 자식이면서, p 태그이면 스타일을 적용해라. 단, 다른 태그는 몇번째인지를 계산할 때 고려하지 않음.*/
+            p:first-of-type {
+                color: red;
+            }
+
+            /* 부모의 마지막 자식이면서, p 태그이면 스타일을 적용해라. 단, 다른 태그는 몇번째인지를 계산할 때 고려하지 않음.*/
+            p:last-of-type {
+                color: purple;
+            }
+
+            /* 부모의 두번째 자식이면서, p 태그이면 스타일을 적용해라. 단, 다른 태그는 몇번째인지를 계산할 때 고려하지 않음.*/
+            p:nth-of-type(2) {
+                color: orange;
+            }
+
+            /* 부모의 뒤에서 세번째 자식이면서, p 태그이면 스타일을 적용해라. 단, 다른 태그는 몇번째인지를 계산할 때 고려하지 않음.*/
+            p:nth-last-of-type(3) {
+                color: brown;
+            }
+            
+            /* 클래스 이름이 genie이 아닌 span 태그*/
+            span:not(.genie) {
+                color: olive;
+            }
+
+            /* input 값이 입력이 되지 않을 경우 invalid하므로 백그라운드 컬러를 브라운으로 적용 */
+            input[type="text"]:invalid {
+                background-color: brown;
+            }
+
+            /* input 값이 입력이 되지 않을 경우 valid하므로 백그라운드 컬러를 올리브로 적용 */
+            input[type="text"]:valid {
+                background-color: olive;
+            }
+        </style>
+        <title>e.genieee</title>
+    </head>
+    <body>
+        <h1>Egenieee</h1>
+
+        <div>
+            <h2>구조 가상 클래스 셀렉터 (Structured Pseudo-Class Selector)</h2>
+            <h3>- 부모 태그의 자식 태그 중 순서를 뽑아서 스타일을 적용할 수 있다. </h3>
+            <h3>p:first-child {color: red;}<br>
+            p:last-child {color: purple;}<br>
+            p:nth-child(2) {color: orange;}<br>
+            p:nth-last-child(3) {color: brown;}
+            </h3>
+            <div>
+                (div)
+                <p>Hi I'm first child</p>
+                <p>Hi I'm second chile</p>
+                <p>Hi I'm third child</p>
+                <p>Hi I'm fourth child</p>
+                <p>Hi I'm fiveth child</p>
+                <p>Hi I'm sixth chile</p>
+                (/div)
+            </div>
+            <br>
+            <div>
+                (div)
+                <h2>This is h2 tag</h2>
+                <p>Hi I'm first child</p>
+                <p>Hi I'm second chile</p>
+                <p>Hi I'm third child</p>
+                <p>Hi I'm fourth child</p>
+                <p>Hi I'm fiveth child</p>
+                <p>Hi I'm sixth chile</p>
+                <h2>This is h2 tag</h2>
+                (/div)
+            </div>
+            <br>
+            <h3>- 2n-1과 같은 수식으로도 나타낼 수 있다. </h3>
+            <h3>
+                h4:nth-child(2n-1) {color: olive;}<br>
+                h4:nth-last-child(2n-1) {color: brown;}<br>
+            </h3>
+            <div>
+                <h4>Hi I'm first child</h4>
+                <h4>Hi I'm second chile</h4>
+                <h4>Hi I'm third child</h4>
+                <h4>Hi I'm fourth child</h4>
+                <h4>Hi I'm fiveth child</h4>
+                <h4>Hi I'm sixth child</h4>
+                <!-- <h4>Hi I'm seventh child</h4> -->
+            </div>
+            
+        </div>
+        <div>
+            <h3>하지만 위와 같은 문법은 해당 태그 사이에 다른 태그가 있어도 카운트해서 스타일을 적용한다. 특정 태그 중에서만 순서를 뽑아서 스타일을 적용하고 싶을 때는 다음과 같은 셀럭터를 사용한다.</h3>
+            <h3>p:first-of-type {color: red;}<br>
+                p:last-of-type {color: purple;}<br>
+                p:nth-of-type(2) {color: orange;}<br>
+                p:nth-last-of-type(3) {color: brown;}
+            </h3>
+            <br>
+            <div>
+                (div)
+                <h2>This is h2 tag</h2>
+                <p>Hi I'm first child</p>
+                <p>Hi I'm second chile</p>
+                <p>Hi I'm third child</p>
+                <p>Hi I'm fourth child</p>
+                <p>Hi I'm fiveth child</p>
+                <p>Hi I'm sixth chile</p>
+                <h2>This is h2 tag</h2>
+                (/div)
+            </div>
+        </div>
+        <br>
+        <div>
+            <h2>부정 셀렉터 (Negation Pseudo-Class Selector)</h2>
+            <h3>- 특정 태그를 제외한 태그에게만 스타일을 적용할 수 있다. </h3>
+            <h3>span:not(.genie) {color:olive;} </h3>
+            <br>
+            <div>
+                <span class="genie">class="genie"</span><br>
+                <span class="genieee">class="genieee"</span>
+            </div>
+        </div>
+        <br>
+        <div>
+            <h2>정합성 체크 셀렉터 (Validity Pseudo-Class Selector)</h2>
+            <h3>- 태그가 정합성을 만족하는지 안하는지 여부에 따라 스타일을 적용할 수 있다. </h3>
+            <h3>input[type="text"]:invalid {background-color:brown;}<br>
+            input[type="text"]:valid {background-color:olive;}
+            </h3>
+            <form action="https://github.com/Egenieee">
+                <input type="text" id="id" name="id" required>
+                <input type="submit">
+            </form>
+        </div>
+    </body>
+</html>

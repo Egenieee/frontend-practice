@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="css selector 연습이당">
+        <meta name="keywords" content="HTML, CSS, JAVSCRIPT">
+        <meta name="author" content="e.genieee">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <style>
+            h2 {
+                color: brown;
+            }
+
+            p.color.font#genie {
+                color: olive;
+                font-size: 20px;
+                text-align: center;
+            }
+            /* color, font라는 클래스를 가지고 있고 id값이 genie인 p tag는 이렇게 꾸미자 ! */
+
+            /* .color {
+                color: red;
+            }
+
+            .font {
+                font-size: 16px;
+            }
+
+            #genie {
+                text-align: center;
+            } */
+
+            h4 {
+                color: olivedrab;
+            }
+
+            div span {
+                color: brown;
+            }
+            /* 후손 셀렉터 : div 안에 있는 p태그를 꾸며라*/
+
+            div > h2 {
+                color: olive;
+            }
+            /* 자손 셀렉터 : div 안에 바로 다음 하위 태그인 h5태그를 꾸며라*/
+
+            h1 + h3 {
+                color: olive;
+            }
+            /* 인접 형제 셀렉터 : h1 바로 다음 하위 태그인 h3태그를 꾸며라*/
+
+            h1 ~ h6 {
+                color: olive;
+            }
+            /* 일반 형제 셀렉터 : h1 뒤에 있는 h6태그를 꾸며라*/
+
+        </style>
+        <title>e.genieee</title>
+    </head>
+    <body>
+        <h1>Css selector에 대해서 알아보자! 2</h1>
+
+        <br>
+        <h2>css selector combination</h2>
+        <h3>p.color.font#genie {color: olive; font-size: 20px; text-align: center;}</h3>
+        <p>- tag, class, id를 조합해서 selector로 사용가능하다. 클래스 마다 폰트 사이즈 지정, 폰트 컬러 지정, 정렬 지정 등을 해줄 때 이렇게 사용한다.</p>
+        <p>- 여러 class를 쓸 때는 태그 안에 "class= color font"와 같이 스페이스로 클래스 명을 이어준다. </p>
+        <p class="color font" id="genie">class="color font" id="genie"</p>
+        <p class="color" id="genie">class="color"</p>
+
+        <br>
+        <h2>복합 selector</h2>
+        <p>- tag는 중첩시킬 수 있어, 각 태그 또는 요소 간에 부모/자식 관계가 생성된다.</p>
+        <p>- 복합 selector는 부모.자식 관계를 기반으로 특정 부분을 선택해 스타일을 적용할 수 있다.</p>
+        <P>- 다음과 같이 분류할 수 있다.</P>
+
+        <ul>
+            <li>Descendant Selector : 스페이스로 표시</li>
+            <li>Child Selector : ">" 로 표시</li>
+            <li>Adjacent Sibling Selector : "+" 로 표시</li>
+            <li>General Sibling Selector : "~" 로 표시</li>
+        </ul>
+
+        <br>
+        <h3>Descendant Selector</h3>
+        <h3>div span {color: brown;}</h3>
+        <p>- 후손 셀렉터는 부모 태그(div) 안에 있는 모든 태그 중에 특정 태그 (span)를 선택해서 스타일을 적용한다.</p>
+        <div>
+            (div)
+            <h1>css 란? (h1)</h1>
+            <h2>css 언어 (h2)</h2>
+            <p>웹 문서의 전반적인 스타일을 미리 저장해 둔 <span>스타일시트 (span)</span>이다. 문서 전체의 일관성을 유지할 수 있고, 세세한 스타일 지정의 필요를 줄어들게 하였다. (p)</p>
+            (div)
+        </div>
+
+        <br>
+        <h3>Child Selector</h3>
+        <h3>div > h2 {color: olive;}</h3>
+        <p>- 자식 셀렉터는 부모 태그(div) 안에 있는 바로 다음 하위 태그(h1)를 선택해서 스타일을 적용한다.</p>
+        <div>
+            (div)
+            <h1>css 란? (h1)</h1>
+            <h2>css 언어 (h2)</h2>
+            <p>웹 문서의 전반적인 스타일을 미리 저장해 둔 <span>스타일시트</span>이다. 문서 전체의 일관성을 유지할 수 있고, 세세한 스타일 지정의 필요를 줄어들게 하였다.</p>
+            (div)
+        </div>
+
+        <br>
+        <h3>Adjacent Sibling Selector</h3>
+        <h3>h1 + h3 {color: olive;}</h3>
+        <p>- 인접 형제 셀렉터는 특정 태그(h1)와 동일 레벨에 위치하고, 특정 태그(h1) 바로 뒤에 위치하는 태그(h2)에 스타일을 적용한다. </p>
+        <div>
+            (div)
+            <h1>css 란? (h1)</h1>
+            <h3>css 언어 (h3)</h3>
+            (div)
+        </div>
+
+        <br>
+        <h3>General Sibling Selector</h3>
+        <h3>h1 ~ h6 {color: olive;}</h3>
+        <p>- 일반 형제 셀렉터는 특정 태그(h1)와 동일 레벨에 위치하고, 특정 태그(h1) 뒤에 위치하는 태그(h6)에 스타일을 적용한다. *바로 뒤에 위치하지 않고, 사이에 다른 태그가 있어도 적용된다.</p>
+        <div>
+            (div)
+            <h1>css 란? (h1)</h1>
+            <p>여기는 문단 태그 (p)</p>
+            <h6>css 언어 (h3)</h6>
+            (div)
+        </div>
+
+    </body>
+</html>

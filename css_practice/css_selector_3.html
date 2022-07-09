@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="css selector 연습이당">
+        <meta name="keywords" content="HTML, CSS, JAVSCRIPT">
+        <meta name="author" content="e.genieee">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <style>
+            /* 방문하지 않은 링크 */
+            a:link {
+                color: royalblue;
+            }
+
+            /* 방문한 링크 */
+            a:visited {
+                color: olive;
+            }
+            
+            /* 링크에 마우스가 올라가있는 상태 */
+            a:hover {
+                color: darkblue;
+            }
+            
+            /* 링크를 클릭한 상태 (누르고 있는 상태) */
+            a:active {
+                color: red;
+            }
+
+            /* 특정 요소에 포커스가 있는 상태 */
+            input:focus {
+                color: darkolivegreen;
+            }
+            
+            h2:hover {
+                color: royalblue;
+            }
+
+            /* UI 셀렉터가 체크되지 않은 상태면 span 태그에 스타일을 적용해라 */
+            input[type='radio']:indeterminate + span {
+                color: royalblue;
+            }
+
+            /* UI 셀렉터가 체크된 상태면 span 태그에 스타일을 적용해라. */
+            input[type='radio']:checked + span {
+                color: olive;
+            }
+
+            /* UI 셀렉터가 사용 가능한 상태면 태그에 스타일을 적용해라 */
+            input[type='checkbox']:enabled + span {
+                color: darkblue;
+            }
+
+            /* UI 셀렉터가 사용 불가능한 상태면 태그에 스타일을 적용해라 */
+            input[type='checkbox']:disabled + span {
+                color: red;
+            }
+        </style>
+        <title>e.genieee</title>
+    </head>
+    <body>
+        <!-- 가상 클래스 셀렉터 -->
+        <div>
+            <h1>가상 클래스 셀렉터 (Pseudo-Class Selector)</h1>
+            <h2>Egenieee의 <span>Github</span>주소입니다.</h2>
+            <a href="https://github.com/Egenieee" target="_blank">Egenieee's Github</a>
+
+            <form action="https://github.com/Egenieee" method="get">
+                <input type="text" id="data", name="data"><br>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+
+        <br>
+
+        <!-- UI 요소 상태 셀렉터 -->
+        <div>
+            <h1>UI 요소 상태 셀렉터 (UI Element States Pseudo-Class Selector)</h1>
+
+            <form action="https://github.com/Egenieee" method="get">
+                <input type="radio" value="item1" name="item"><span>이진희</span><br>
+                <input type="radio" value="item2" name="item"><span>이지니</span><br>
+                <input type="checkbox" value="check1" name="check"><span>check1</span><br>
+                <input type="checkbox" value="check2" name="check" disabled><span>선택불가한 체크박스</span><br>
+            </form>
+        </div>
+    </body>
+</html>

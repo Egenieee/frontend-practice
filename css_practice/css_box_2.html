@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="description" content="css box 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVSCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        div {
+            background-color: blanchedalmond;
+
+            border: 10px solid darkkhaki;
+            
+            width: 150px;
+
+            height: 150px;
+
+            /* box-sizing을 border-box로 지정하지 않으면 디폴트값으로 content-box로 지정이 된다. */
+            /* border-box은 content, padding, border 세가지를 포함한 것을 총 너비, 높이로 본다.*/
+            box-sizing: border-box;
+
+            /* 지정된 박스 아래로 내용이 넘쳤다면 hidden을 사용해서 숨길 수 있다. */
+            overflow: scroll;
+        }
+    </style>
+    <title>e.genieee</title>
+</head>
+<body>
+    <div>HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices.</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="description" content="css box 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVSCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        .first {
+            height: 50px;
+            background-color: red;
+            border: 1px solid olive;
+
+            /* 순서대로 위, 오른쪽, 아래, 왼쪽의 margin을 지정한다. */
+            margin: 10px 20px 10px 20px;
+
+            /* 위의 단축 프로퍼티 설정은 아래와 같다.
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 10px
+            margin-left: 10px
+            */
+        }
+
+        .second {
+            height: 50px;
+            background-color: orange;
+            border: 1px solid olive;
+
+            margin: 10px 20px 10px;
+
+            /* 위의 단축 프로퍼티 설정은 아래와 같다.
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 20px
+            margin-left: 10px
+            */
+        }
+
+        .third {
+            height: 50px;
+            background-color: yellow;
+            border: 1px solid olive;
+
+            margin: 10px 20px;
+
+            /* 위의 단축 프로퍼티 설정은 아래와 같다.
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 20px
+            margin-left: 10px
+            */
+        }
+
+        .fourth {
+            height: 50px;
+            background-color: green;
+            border: 1px solid olive;
+
+            margin: 20px;
+
+            /* 위의 단축 프로퍼티 설정은 아래와 같다.
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px
+            margin-left: 20px
+            */
+        }
+
+        .center {
+            width: 300px;
+            background-color: green;
+            border: 1px solid olive;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <title>e.genieee</title>
+</head>
+<body>
+    <div>
+        <h3>4개의 프로퍼티 값 설정 margin: 10px 20px 10px 20px;</h3>
+        <div class="first">first box</div>
+        <div class="first">second box</div>
+    </div>
+    <br>
+    <div>
+        <h3>3개의 프로퍼티 값 설정 margin: 10px 20px 10px;</h3>
+        <div class="second">first box</div>
+        <div class="second">second box</div>
+    </div>
+    <br>
+    <div>
+        <h3>2개의 프로퍼티 값 설정 margin: 10px 20px;</h3>
+        <div class="third">first box</div>
+        <div class="third">second box</div>
+    </div>
+    <br>
+    <div>
+        <h3>1개의 프로퍼티 값 설정 margin: 20px;</h3>
+        <div class="fourth">first box</div>
+        <div class="fourth">second box</div>
+    </div>
+    <br>
+    <div>
+        <h3>블럭 특성을 가진 요소에 대한 중앙 정렬</h3>
+        <div class="center">first box</div>
+        <div class="center">second box</div>
+    </div>
+</body>
+</html>

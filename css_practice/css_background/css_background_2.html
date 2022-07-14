@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="css background 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVSCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        div {
+            background-image: url("https://user-images.githubusercontent.com/81270604/178992071-eb703928-1777-4cd7-b423-38e67421ebb8.png");
+            background-repeat: no-repeat;
+            background-size: 30%;
+
+            /* background image의 위치를 설정할 수 있다. 정중앙은 center */
+            /* left top, left center, center bottom 등과 같이 나타낼 수도 있고 %, px, em 등으로 위치 지정도 가능하다. 100% 100%는 우측 하단 */
+            background-position: center top;
+            
+            /* 이 값을 fixed로 설정하면, 스크롤을 해도 배경 이미지는 그대로 있게 된다. */
+            background-attachment: scroll;
+
+            /* 이 값은 디폴트 값이 투명 */
+            background-color: transparent;
+
+            height: 2000px;
+
+            /* 아래와 같이, background 설정을 한 줄에 할 수도 있다 */
+            /* background: color image repeat attachment position */
+        }
+
+        h1 {
+            color: rgb(49, 71, 49);
+            text-align: center;
+        }
+    </style>
+    <title>e.genieee</title>
+</head>
+<body>
+    <div>
+        <h1>iPhone 14</h1>
+    </div>
+</body>
+</html>

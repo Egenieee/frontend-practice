@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="description" content="css animation 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>e.genieee</title>
+    <style>
+        .ball {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 50px;
+            background: olive;
+            animation-name: ball;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes ball {
+            0% {
+                background-color: olive;
+                color: red;
+            }
+            100% {
+                background-color: saddlebrown;
+                color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>animation도 마찬가지로 단축 프로퍼티로 한 줄에 표현할 수 있다. </p>
+    <p>animation : animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode animation-play-state</p>
+</body>
+</html>

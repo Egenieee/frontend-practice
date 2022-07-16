@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="description" content="css block 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVSCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>e.genieee</title>
+</head>
+<body>
+    <h2>block</h2>
+    <h3>block 요소 안에는 inline 요소가 들어갈 수 있음. 항상 새로운 라인에서 시작한다.</h3>
+    <div style="background-color: olive; width: 300px;">
+        block(block)<span>level(inline)</span>lement(block)
+    </div>
+    <br>
+    <h2>inline</h2>
+    <h3>inline 요소 안에는 block 요소가 들어갈 수 없음. 또한, 넓이를 지정할 수 없음. content 내용에 맞게 지정된다.</h3>
+    <span style="background-color: olive; width: 150px">
+        block(inline)
+        <div>
+            level(block)
+        </div>
+        element(inline)
+    </span>
+    <br>
+    <h3>display 속성을 통해서 태그의 특성을 바꿀 수 있다.</h3>
+    <p>예를 들어 block -> inline, inline -> block 으로 바꿀 수 있다. 아래 예시는 위의 inline 특성 예시를 block으로 바꾼 예시이다.</p>
+    <span style="background-color: olive; width: 150px; display: block">
+        block(block)
+        <div>
+            level(block)
+        </div>
+        element(block)
+    </span>
+    <br>
+    <h2>display: none vs visibility:hidden</h2>
+    <p>해당 요소를 안보이게 하는 속성은 같지만, display: none으로 할 경우엔 해당 요소가 차지하는 공간마저 없애게 되지만, visibility:hidden으로 할 경우엔 보이지만 않게 할 뿐 해당 요소가 차지하는 공간은 그대로 남겨둔다.</p>
+    <p>주로 hidden을 많이 사용한다.</p>
+    <br>
+    <h2>inline-block</h2>
+    <p>inline과 block 특성 모두를 가진다. 예를 들어 inline 요소와 같이 동일 라인에 표현되면서 너비 높이 마진 패딩 등의 속성을 지정할 수 있다.</p>
+    <div style="background-color: olive; width: 300px;">
+        block(block)
+    </div>
+    <br>
+    <span style="background-color: olive; width: 300px; display: inline-block">
+        block(inline-block)
+    </span>
+    <span style="background-color: olive; width: 300px; display: inline-block">
+        block(inline-block)
+    </span>
+</body>
+</html>

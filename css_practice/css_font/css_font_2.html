@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="description" content="css font 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>e.genieee</title>
+    <style>
+        .ellipsis {
+            width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <h2>letter-spacing & word-spacing 속성</h2>
+    <p>글자 사이 간격은 letter-spacing 속성을 사용하고 단어 사이의 간격은 word-spacing으로 설정한다.</p>
+    <p>보통 px CSS 단위를 사용하여 설정한다. 설정 값을 키울수록 간격이 넓어진다. 음수도 속성 값으로 사용할 수 있다.</p>
+    <p style="letter-spacing: 20px;">letter-spacing: 20px 글자 간격 20px</p>
+    <p style="word-spacing: -3px;">word-spacing: -3px 단어 간격 -3px</p>
+    <br>
+    <h2>text-align 속성</h2>
+    <p>글자 수평 정렬 설정 left(왼쪽 정렬), right(오른쪽 정렬), center(가운데 정렬), justify(양쪽 정렬) 속성이 있다.</p>
+    <p style="text-align: left; font-size: 20px;">left</p>
+    <p style="text-align: right; font-size: 20px">right</p>
+    <p style="text-align: center; font-size: 20px">center</p>
+    <p style="text-align: justify; font-size: 20px">justify</p>
+    <br>
+    <h2>text-decoratiion 속성</h2>
+    <p>글자에 선을 넣는 설정</p>
+    <p style="text-decoration: none;">text-decoration: none;</p>
+    <p style="text-decoration: line-through;">text-decoration: line-through;</p>
+    <p style="text-decoration: overline;">text-decoration: overline;</p>
+    <p style="text-decoration: underline;">text-decoration: underline;</p>
+    <h2>white-space 속성</h2>
+    <p>글자에 들어있는 스페이스, 탭, 줄바꿈, 자동 줄바꿈 설정</p>
+    <p>normal, nowrap, pre, pre-wrap, pre-line 속성이 있다.</p>
+    <p style="white-space: normal;">white-space를 normal로 설정할 시, 반응형웹 화면의 크기 조절에 따라서 변한다. 
+        white-space를 normal로 설정할 시, 반응형웹 화면의 크기 조절에 따라서 변한다. 
+        white-space를 normal로 설정할 시, 반응형웹 화면의 크기 조절에 따라서 변한다. 
+    </p>
+    <p style="white-space: nowrap;">
+        white-space를 normal로 설정할 시, 스페이스와 탭, 줄바꿈을 모두 없애고 병합한다. 
+        white-space를 normal로 설정할 시, 스페이스와 탭, 줄바꿈을 모두 없애고 병합한다. 
+        white-space를 normal로 설정할 시, 스페이스와 탭, 줄바꿈을 모두 없애고 병합한다. 
+    </p>
+    <p style="white-space: pre;">
+    white-space를 pre로 설정할 시, 단락안에 쓴 내용이 그대로 웹사이트에서 보여지게 된다. 스페이스와 탭그리고 줄바꿈이 모두 보존된다. 
+    white-space를 pre로 설정할 시, 단락안에 쓴 내용이 그대로 웹사이트에서 보여지게 된다. 스페이스와 탭그리고 줄바꿈이 모두 보존된다.
+    white-space를 pre로 설정할 시, 단락안에 쓴 내용이 그대로 웹사이트에서 보여지게 된다. 스페이스와 탭그리고 줄바꿈이 모두 보존된다.
+    </p>
+    <p style="white-space: pre-wrap;">
+    white-space를 pre-wrap으로 설정할 시, 단락안에 쓴 내용이 그대로 웹사이트에서 보여지게 된다. 스페이스와 탭그리고 줄바꿈이 모두 보존되고, 자동 줄바꿈이 실행된다.
+    white-space를 pre-wrap으로 설정할 시, 단락안에 쓴 내용이 그대로 웹사이트에서 보여지게 된다. 스페이스와 탭그리고 줄바꿈이 모두 보존되고, 자동 줄바꿈이 실행된다.
+    white-space를 pre-wrap으로 설정할 시, 단락안에 쓴 내용이 그대로 웹사이트에서 보여지게 된다. 스페이스와 탭그리고 줄바꿈이 모두 보존되고, 자동 줄바꿈이 실행된다.
+    </p>
+    <h2>text-overflow 설정</h2>
+    <p>문자열이 차서 넘칠 경우 (부모 영역을 벗어날 경우)에 자동 줄바꿈이 되지 않는 문자열 처리 설정</p>
+    <p>width 속성이 설정되어 있음, white-space가 nowrap으로 설정되어 있음, overflow 속성이 visible 이외의 값(hidden)으로 설정되어 있음 ⇨ 이 조건들이 설정되어 있는 상태에서 설정 가능.</p>
+    <p>즉 다시말해 width가 설정되어 있어서 overflow 인지를 체크할 수 있고, 자동 줄바꿈이 안되어 있고, 넘친 값이 hidden으로 보이지 않을 경우에 text-overflow 속성을 설정할 수 있다는 뜻</p>
+    <p>text-overflow 속성 값은 clip, ellipsis 가 있다.</p>
+    <p class="ellipsis">text-overflow 속성 값을 ellipsis으로 설정할 시, 정해진 width 이후로는 ...으로 표시된다.</p>
+    <p>text-overflow 속성 값을 ellipsis으로 설정할 시, 정해진 width 이후로는 ...으로 표시된다.</p>
+</body>
+</html>

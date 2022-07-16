@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="description" content="css font 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>e.genieee</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+    <style>
+        .font-xx-small {
+            font-size: xx-small;
+        }
+        .font-x-small {
+            font-size: x-small;
+        }
+        .font-small {
+            font-size: small;
+        }
+        .font-medium {
+            font-size: medium;
+        }
+        .font-larger {
+            font-size: larger;
+        }
+        .font-px {
+            font-size: 16px;
+        }
+
+        .font-gugi {
+            font-family: 'Gugi', cursive;
+        }
+    </style>
+</head>
+<body>
+    <h2>font-size</h2>
+    <p>default font size</p>
+    <p class="font-medium">medium font size</p>
+    <p class="font-px">16px font size</p>
+    <p class="font-larger">larger font size</p>
+    <p class="font-small">small font size</p>
+    <p class="font-x-small">x-small font size</p>
+    <p class="font-xx-small">xx-small font size</p>
+    <br>
+    <h2>font-family</h2>
+    <p>일반적으로 font-family에 여러 폰트를 설정해서 사용자 pc에 해당 폰트가 설치되어 있지 않을 경우를 대비한다.</p>
+    <p>세 가지 정도의 폰트를 설정하고 마지막 폰트를 generic-font를 설정한다.</p>
+    <br>
+    <h2>웹폰트</h2>
+    <p>웹폰트를 사용하게 되면, 사용자 pc에 해당 폰트가 설치되어 있지 않아도 어느 브라우저상에서나 해당 폰트로 웹페이지를 표현할 수 있다.</p>
+    <p>서버에서 따로 웹폰트를 다운받아야 하므로 느릴 수 있지만, 요즘 CDN 성능이 좋아지고 있어서 사용해도 괜찮다.</p>
+    <p>웹폰트 적용 x</p>
+    <p class="font-gugi">웹폰트 적용 o</p>
+    <br>
+    <h2>font-style 속성</h2>
+    <p>글자 스타일 설정 number (100-900), bold, bolder, lighter, normal 속성이 있다.</p>
+    <p style="font-style: normal;">normal</p>
+    <p style="font-style: italic;">italic</p>
+    <p style="font-style: oblique;">oblique</p>
+    <br>
+    <h2>font-weight 속성</h2>
+    <p>글자 굵기 설정</p>
+    <p style="font-weight: 100;">number 100</p>
+    <p style="font-weight: normal;">normal</p>
+    <p style="font-weight: 400;">number 400</p>
+    <p style="font-weight: bolder;">bolder</p>
+    <p style="font-weight: lighter;">lighter</p>
+    <p style="font-weight: 900;">number 900</p>
+    <br>
+    <h2>font-variant 속성</h2>
+    <p>소문자를 소문자 크기의 대문자로 바꾸는 설정</p>
+    <p style="font-variant: normal;">normal</p>
+    <p style="font-variant: small-caps;">small-caps</p>
+    <br>
+    <h2>line-height 속성</h2>
+    <p>라인 높이 설정 normal(1.2), length(px, %, em, rem 등의 단위 사용), number(글자 크기의 몇 배인지) 속성이 있다.</p>
+    <P style="line-height: 4;">코로나에 걸려서 일주일간 방콕예약이다. 너무너무 심심할거 같은데 우야노.. 강의나 열심히 듣고 책도 열심히 읽으면서 일주일을 알차게 보내야 겠다. 운동을 못하는 것은 너무 슬프지만.. 일주일간 체력을 잘 비축해놓아야 운동도 열심히 하는거니까! 열심히 해보자구..</P>
+    <P style="line-height: normal;">코로나에 걸려서 일주일간 방콕예약이다. 너무너무 심심할거 같은데 우야노.. 강의나 열심히 듣고 책도 열심히 읽으면서 일주일을 알차게 보내야 겠다. 운동을 못하는 것은 너무 슬프지만.. 일주일간 체력을 잘 비축해놓아야 운동도 열심히 하는거니까! 열심히 해보자구..</P>
+    <P style="line-height: 70%;">코로나에 걸려서 일주일간 방콕예약이다. 너무너무 심심할거 같은데 우야노.. 강의나 열심히 듣고 책도 열심히 읽으면서 일주일을 알차게 보내야 겠다. 운동을 못하는 것은 너무 슬프지만.. 일주일간 체력을 잘 비축해놓아야 운동도 열심히 하는거니까! 열심히 해보자구..</P>
+    <P style="line-height: 2em;">코로나에 걸려서 일주일간 방콕예약이다. 너무너무 심심할거 같은데 우야노.. 강의나 열심히 듣고 책도 열심히 읽으면서 일주일을 알차게 보내야 겠다. 운동을 못하는 것은 너무 슬프지만.. 일주일간 체력을 잘 비축해놓아야 운동도 열심히 하는거니까! 열심히 해보자구..</P>
+    <br>
+    <h2>font 단축 프로퍼티</h2>
+    <p>font : font-style font-variant font-weight font-size/line-height font family</p>
+    <p>font : italic small-caps 900 larger/2 Gugi</p>
+    <P style="font : italic small-caps 900 larger/2 Gugi">hi my name is jinhee 지금은 폰트 스타일 테스트 중입니다.</P>
+</body>
+</html>

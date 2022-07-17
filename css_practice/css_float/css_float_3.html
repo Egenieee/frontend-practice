@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="description" content="css float 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>e.genieee</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .box-one {
+            background: salmon;
+            float: left;
+        }
+        .box-two {
+            background: saddlebrown;
+            float: left;
+        }
+        .box-three {
+            background: brown;
+            float: left;
+        }
+        .box-four {
+            width: 200px;
+            height: 200px;
+            background: sienna;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 세 개의 상자가 수평 정렬이 끝난 뒤에 clear를 적용함으로써 다음 큰 상자가 올 때 세 개의 상자 아래에 위치하도록 한다. -->
+    <div class="clearfix">
+        <div class="box box-one">box-one</div>
+        <div class="box box-two">box-two</div>
+        <div class="box box-three">box-three</div>
+    </div>
+    <div class="box box-four">box-four</div>
+</body>
+</html>

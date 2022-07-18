@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="description" content="css inheritance 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>e.genieee</title>
+    <style>
+        p {
+            color: brown;
+        }
+        h1 {
+            border: 2px solid brown;
+        }
+        span {
+            border: inherit;
+        }
+    </style>
+</head>
+<body>
+    <h2>p {color: brown;}</h2>
+    <p>[p tag <span>[span tag]</span>]</p>
+    <h2>h1 {border: 2px solid brown;}</h2>
+    <h2>span {border: inherit;} ⬅️ 강제로 span 태그가 부모의 스타일을 상속받도록 함</h2>
+    <h1>[h1 tag <span>[span tag]</span>]</h1>
+    <br>
+    <h2>프로퍼티 별 상속 여부</h2>
+    <ul>
+        <li>상속 가능 : text-align, line-height, color, font, visibility, opacity</li>
+        <li>상속 불가 : width, height, margin, padding, border, display, box-sizing, background, vertical-align, position, z-index, overflow, float</li>
+    </ul>
+</body>
+</html>

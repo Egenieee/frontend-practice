@@ -18,8 +18,8 @@
             justify-content: space-around;
             flex-wrap: wrap;
             /* 교차 축을 기준으로 정렬하는 프로퍼티 align-items와 align-content */
-            /* align-items는 한 행에 대해서 행 마다 적용 */
-            align-items: flex-start;
+            /* align-content는 복수의 행을 하나의 그룹으로 묶어서 적용시킨다. */
+            align-content: space-between;
         }
         .item {
             border: 2px solid whitesmoke;
@@ -31,24 +31,6 @@
             background-color: rosybrown;
             color: wheat;
         }
-        .item-one {
-            height: 100px;
-        }
-        .item-two {
-            height: 150px;
-        }
-        .item-three {
-            height: 200px;
-        }
-        .item-four {
-            height: 50px;
-        }
-        .item-five {
-            height: 100px;
-        }
-        .item-font {
-            font-size: 3em;
-        }
     </style>
 </head>
 <body>
@@ -59,6 +41,10 @@
         <div class="item item-three">item3</div>
         <div class="item item-four">item4</div>
         <div class="item item-five">item5</div>
+        <div class="item item-six">item6</div>
+        <div class="item item-seven">item7</div>
+        <div class="item item-eight">item8</div>
+        <div class="item item-nine">item9</div>
     </div>
 </body>
 </html>

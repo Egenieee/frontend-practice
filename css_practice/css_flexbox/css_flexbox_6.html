@@ -10,16 +10,13 @@
     <title>e.genieee</title>
     <style>
         .container {
+            margin: 0 auto;
             border: 2px solid brown;
             background-color: olive;
             width: 400px;
-            height: 500px;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            /* 교차 축을 기준으로 정렬하는 프로퍼티 align-items와 align-content */
-            /* align-content는 복수의 행을 하나의 그룹으로 묶어서 적용시킨다. */
-            align-content: space-between;
         }
         .item {
             border: 2px solid whitesmoke;
@@ -31,20 +28,20 @@
             background-color: rosybrown;
             color: wheat;
         }
+        .item-one {
+            order: 8;
+        }
+        .item-two {
+            order: 7;
+        }
+
     </style>
 </head>
 <body>
-    <h3>align-content</h3>
+    <h3>order</h3>
     <div class="container">
-        <div class="item">item1</div>
-        <div class="item">item2</div>
-        <div class="item">item3</div>
-        <div class="item">item4</div>
-        <div class="item">item5</div>
-        <div class="item">item6</div>
-        <div class="item">item7</div>
-        <div class="item">item8</div>
-        <div class="item">item9</div>
+        <div class="item item-one">item1</div>
+        <div class="item item-two">item2</div>
     </div>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="description" content="css flexbox 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>e.genieee</title>
+    <style>
+        .container {
+            border: 2px solid brown;
+            background-color: olive;
+            width: 400px;
+            height: 500px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            /* 교차 축을 기준으로 정렬하는 프로퍼티 align-items와 align-content */
+            align-items: flex-start;
+        }
+        .item {
+            border: 2px solid whitesmoke;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 50px;
+            background-color: rosybrown;
+            color: wheat;
+        }
+        .item-one {
+            height: 100px;
+        }
+        .item-two {
+            height: 150px;
+        }
+        .item-three {
+            height: 200px;
+        }
+        .item-four {
+            height: 50px;
+        }
+        .item-five {
+            height: 100px;
+        }
+        .item-font {
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <h3>flex-wrap</h3>
+    <div class="container">
+        <div class="item item-one">item1</div>
+        <div class="item item-two">item2</div>
+        <div class="item item-three">item3</div>
+        <div class="item item-four">item4</div>
+        <div class="item item-five">item5</div>
+    </div>
+</body>
+</html>

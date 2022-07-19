@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="description" content="css flexbox 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>e.genieee</title>
+    <style>
+        .container {
+            margin: 0 auto;
+            border: 2px solid brown;
+            background-color: olive;
+            display: flex;
+        }
+        .item {
+            margin: 10 0px;
+            border: 2px solid whitesmoke;
+            box-sizing: border-box;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 50px;
+            background-color: rosybrown;
+            color: wheat;
+        }
+        .item-one {
+            flex-shrink: 1;
+            flex-basis: 200px;
+        }
+        .item-two {
+            flex-shrink: 0;
+            flex-basis: 200px;
+        }
+        .item-three {
+            flex-grow: 1;
+            flex-basis: 200px;
+        }
+        .item-four {
+            flex-grow: 0;
+            flex-basis: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>order</h3>
+    <div class="container">
+        <div class="item item-one">item1</div>
+        <div class="item item-two">item2</div>
+    </div>
+    <div class="container">
+        <div class="item item-three">item3</div>
+        <div class="item item-four">item4</div>
+    </div>
+</body>
+</html>

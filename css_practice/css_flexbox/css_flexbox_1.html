@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="description" content="css flexbox 연습이당">
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
+    <meta name="author" content="e.genieee">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>e.genieee</title>
+    <style>
+        .container {
+            border: 1px solid brown;
+            background-color: olive;
+            width: 200px;
+
+            /* 아래 float나 inline-block의 어려운 점들을 모두 다 해결할 flex 프로퍼티 ! */
+            /* inline-flex로 설정하면 컨테이너끼리 수평 정렬이 되고, 그냥 flex로 설정하면 수직 정렬이 된다. */
+            display: inline-flex;
+        }
+        .item {
+            border: 2px solid whitesmoke;
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            text-align: center;
+
+            /* 수직 가운데 정렬할 때 line-height에 height 값을 그대로 써주자 !*/
+            line-height: 50px;
+
+            background-color: rosybrown;
+            color: wheat;
+            /* display를 inline-block으로 설정하면 수평으로 정렬된다. 하지만, 줄바꿈도 인식해서 박스 사이에 간격이 생기게 된다.*/
+            /* display: inline-block; */
+
+            /* float: left를 쓰면? clearfix 라는 특수한 클래스를 정의해서 오류를 바꿔줘야 한다. */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+    </div>
+    <div class="container">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+    </div>
+    <h3>flexbox는 수평 정렬할 아이템들(자식 요소)과 그 아이템을 감싸는 컨테이너(부모 요소)가 필수적이다. </h3>
+</body>
+</html>

@@ -211,6 +211,47 @@ section {
     display: flex;
 }
 
+.class-list {
+    display: flex;
+    list-style: none;
+}
+
+.class-card {
+    width: 240px;
+    box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+    border-radius: 8px;
+    margin: 0 10px;
+}
+
+.class-image {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    height: 150px;
+}
+
+.class-container {
+    width: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.class-skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.class-type {
+    font-size: 0.9rem;
+    color: #949393;
+}
+
+.class-format {
+    font-size: 0.9rem;
+    color: #ffffff;
+    background-color: #0d47a1;
+    padding: 0.2rem;
+}
+
 @media only screen and (min-width: 1200px) {
     .inner {
         max-width: 1200px;

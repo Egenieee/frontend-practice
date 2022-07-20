@@ -8,6 +8,30 @@ body {
     font-family: "Spoca Han Sans Neo", "Sans-serif";
 }
 
+a {
+    all: unset;
+}
+
+a:link {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+a:active {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #3f464d;
+}
+
 .inner {
     width: 100%;
     height: 100%;
@@ -17,7 +41,7 @@ body {
 header {
     width: 100%;
     height: 60px;
-    background-color: #fffcfa;
+    background-color: #fefffa;
     position: fixed;
     top: 0;
     left: 0;
@@ -37,9 +61,19 @@ header {
     font-size: 1.2rem;
 }
 
+.head-container .head-name a:hover {
+    color: #9eb421;
+    cursor: pointer;
+}
+
 .head-container .head-til {
     font-weight: bold;
     font-size: 1.2rem;
+}
+
+.head-container .head-til a:hover {
+    color: #9eb421;
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 1200px) {

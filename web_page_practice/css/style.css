@@ -120,8 +120,71 @@ section {
     line-height: 2rem;
 }
 
+.skill-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skill {
+    width: 25%;
+    background-color: #fefffa;
+    display: flex;
+    align-items: center;
+    border-radius: 9px;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin: 0 10px;
+}
+
+.skill-title {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.skill-name {
+    font-weight: bold;
+    color: #545e6f;
+    margin-bottom: 0.2rem;
+}
+
+.skill-usage {
+    font-size: 0.9rem;
+    color: #545e6f;
+}
+
+.python-style {
+    color: #4294a0;
+}
+
+.analysis-style {
+    color: #ff8066;
+}
+
+.ai-style {
+    color: #f7df1e;
+}
+
+.vue-style {
+    color: #2e7d32;
+}
+
 @media only screen and (min-width: 1200px) {
     .inner {
         max-width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .skill-container {
+        display: none;
     }
 }

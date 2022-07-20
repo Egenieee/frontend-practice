@@ -3,5 +3,47 @@
 }
 
 body {
+    margin: 0 auto;
+    color: #3f464d;
     font-family: "Spoca Han Sans Neo", "Sans-serif";
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #fffcfa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.head-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-container .head-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.head-container .head-til {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 1200px) {
+    .inner {
+        max-width: 1200px;
+    }
 }

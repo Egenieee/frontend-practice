@@ -139,6 +139,11 @@ section {
     padding: 0.5rem 1rem;
     margin: 0 1rem;
     box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translate(0, -5px);
 }
 
 .skill-icon {
@@ -226,6 +231,12 @@ section {
     box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
     border-radius: 8px;
     margin: 0 10px;
+    transition: 0.3s;
+}
+
+.class-card:hover {
+    box-shadow: 10px 10px 10px 0px rgba(25, 42, 70, 0.2);
+    transform: translate(0, -5px);
 }
 
 .class-image {
@@ -275,6 +286,15 @@ section {
 .class-detail {
     font-size: 0.9rem;
     color: #545e6f;
+    line-height: 1.5rem;
+}
+
+.roadmap-desc {
+    display: visible;
+}
+
+li a:hover {
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -285,6 +305,10 @@ section {
 
 @media only screen and (max-width: 980px) {
     .skill-container {
+        display: none;
+    }
+
+    .roadmap-desc {
         display: none;
     }
 }
